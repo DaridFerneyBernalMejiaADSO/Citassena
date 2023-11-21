@@ -35,8 +35,18 @@ class LoginController extends Controller
     function __construct()
     {
 
+        //aca colocar  el codigo if (ses)
+
+        
+
         $this->model = $this->model("User"); // Crea una instancia del modelo "User"
 
+        /**
+         * condicion que mira si la sesion esta iniciada, si es verdadero lo debe redirigin directamente a la vista admin
+         */
+        if((session_start() == true )){
+            header('Location: ' . URL . '/admin'); 
+        }
     }
 
 
@@ -146,7 +156,12 @@ class LoginController extends Controller
                     $role = $data['id_role_fk'];
                     print_r($role);
 
-                    header('Location: ' . URL . '/admin'); //Redireccionamiento de 
+                     header('Location: ' . URL . '/admin'); //Redireccionamiento de 
+
+
+                     
+
+
 
 
                 }

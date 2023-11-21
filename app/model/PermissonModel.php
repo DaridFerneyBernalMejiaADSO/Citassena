@@ -25,10 +25,6 @@ class PermissonModel extends Model
      * Inicializa una instancia de la clase y llama al constructor de la clase base (Model).
      */
     parent::__construct();
-<<<<<<< HEAD
-=======
-
->>>>>>> nicolasPrieto
   }
   /**
    * Obtiene todos los registros de permisos de la base de datos.
@@ -92,8 +88,4 @@ class PermissonModel extends Model
     $data = $this->delete($this->tabla, $id); //Realiza la operación de eliminación utilizando el metodo delete
     $this->connection = $this->db->closConnection(); //Cierra la conexión a la base de datos
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> nicolasPrieto
